@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis PBO</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="login-container" id="loginScreen">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Nama lu siapa">
+        <button onclick="startQuiz()">Gas cuy</button>
+    </div>
+
+    <div class="quiz-container" id="quizScreen" style="display: none;">
+        <div class="quiz-header">
+            <span id="questionNumber"></span>
+            <span id="answeredCount">0/30</span>
+        </div>
+        <div id="questionText"></div>
+        <div id="options"></div>
+        <p id="feedback" style="font-size: 18px; margin-top: 10px;"></p>
+        <div class="buttons">
+            <button id="prevButton" onclick="prevQuestion()" disabled>Soal Sebelumnya</button>
+            <button id="nextButton" onclick="nextQuestion()">Soal Berikutnya</button>
+        </div>
+    </div>
+
+    <div class="result-container" id="resultScreen" style="display: none;">
+        <h1>Your score</h1>
+        <p id="finalScore"></p>
+        <button onclick="restartQuiz()">Lagi kuy</button>
+    </div>
+</body>
+</html>
